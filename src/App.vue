@@ -142,9 +142,9 @@ const handleClick = () => {
 
     <div class="grid md:grid-cols-4 grid-cols-2">
 
-        <div v-for="img in imageList" class="bg-fixed w-full md:h-[25dvw] h-[50dvw]"
-            :style="`background:url(${img}) center center / cover no-repeat; `" />
-
+        <!-- <div v-for="img in imageList" class="bg-fixed w-full md:h-[25dvw] h-[50dvw]"
+            :style="`background:url(${img}) center center / cover no-repeat; `" /> -->
+        <img v-for="img in imageList" :src="img" class="aspect-square object-cover	" />
     </div>
     <div class="py-32">
         <h1 class="text-4xl font-bold  text-center" v-motion-slide-visible-once-bottom>
