@@ -87,7 +87,7 @@ const handleClick = () => {
     </div>
 
     <div class="h-[100dvh]  bg-slate-700 bg-fixed bg-no-repeat bg-phone sm:hidden block relative"
-        style="background-position-y: 45%;">
+        style="background-position-y: 15%;">
 
         <div class="backdrop-blur-[2px] w-full h-full relative ">
 
