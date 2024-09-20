@@ -5,14 +5,14 @@ import { CarFront, PlugZap, ArrowRight, Cable, PhoneOutgoing, SquareArrowOutUpRi
 import { ref, onMounted, watch, toRefs, computed } from 'vue';
 
 const imageList = [
-    './assets/images/18414_0.jpg',
-    './assets/images/18423.jpg',
-    './assets/images/18415_0.jpg',
-    './assets/images/18417_0.jpg',
-    './assets/images/18418_0.jpg',
-    './assets/images/18422_0.jpg',
-    './assets/images/18421_0.jpg',
-    './assets/images/18427_0.jpg',
+    './src/assets/images/18414_0.jpg',
+    './src/assets/images/18423.jpg',
+    './src/assets/images/18415_0.jpg',
+    './src/assets/images/18417_0.jpg',
+    './src/assets/images/18418_0.jpg',
+    './src/assets/images/18422_0.jpg',
+    './src/assets/images/18421_0.jpg',
+    './src/assets/images/18427_0.jpg',
 ]
 
 const ourService = ref()
