@@ -43,7 +43,51 @@ const handleClick = () => {
 </script>
 
 <template>
-    <div class="h-screen w-screen bg-slate-700 bg-fixed bg-center bg-no-repeat bg-cover bg-image relative ">
+    <!-- bg-phone -->
+    <div
+        class="h-screen w-screen bg-slate-700 bg-fixed bg-center bg-cover bg-no-repeat bg-image relative sm:block hidden">
+
+        <div class="backdrop-blur-[5px] w-full h-full relative ">
+
+            <div
+                class="flex bg-gradient-to-b from-black px-8 pt-4 pb-10 text-white  sm:justify-between justify-center items-center">
+                <button class="sm:block hidden text-slate-200 hover:text-white duration-200 z-40"
+                    v-motion-slide-left>หน้าหลัก</button>
+                <div class="font-medium text-lg z-40" v-motion-slide-top>HBP Battery</div>
+                <button class="sm:block hidden bg-white/25 hover:bg-white/35 duration-200 px-12 py-1.5 rounded-lg"
+                    v-motion-slide-right>ติดต่อเรา</button>
+            </div>
+
+
+            <div
+                class="absolute sm:top-1/3 top-[30%] sm:left-[10%] left-0 text-white space-y-4 w-screen sm:text-left text-center ">
+                <h1 class="sm:text-[48px] text-4xl font-bold sm:leading-[4rem] leading-[3rem]"
+                    v-motion-slide-visible-once-left>
+                    HBP
+                    Battery <br>
+                    <span class="sm:text-[48px] text-2xl">
+                        ผู้เชี่ยวชาญด้านแบตเตอรี่ <br> เปลี่ยน พ่วงแบตเตอรี่ฉุกเฉิน <br>
+                        สำหรับรถยนต์เฉพาะรุ่น
+                    </span>
+                </h1>
+
+
+                <div class="flex space-x-4 sm:justify-start justify-center">
+                    <button @click="scrollToView" v-motion-slide-visible-once-bottom
+                        class="bg-white hover:bg-slate-100 duration-200 text-black py-2 px-6 rounded-md shadow-lg">
+                        บริการของเรา
+                    </button>
+                    <button v-motion-slide-visible-once-bottom @click="handleClick"
+                        class="bg-yellow-500 hover:bg-yellow-600 duration-200 text-white py-2 px-6 rounded-md shadow-lg flex items-center">
+                        <PhoneOutgoing size="18" class="mr-2" /> 0964962516
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="h-screen w-screen bg-slate-700 bg-fixed bg-center bg-cover bg-no-repeat bg-phone sm:hidden block relative">
 
         <div class="backdrop-blur-[5px] w-full h-full relative ">
 
@@ -319,7 +363,10 @@ const handleClick = () => {
 <style>
 .bg-image {
     background-image: url('./assets/images/18428_0.jpg');
-    background-size: cover;
+}
+
+.bg-phone {
+    background-image: url('./assets/images/18413_0.jpg');
 
 }
 </style>
