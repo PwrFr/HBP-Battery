@@ -171,25 +171,25 @@ const onAddLine = () => {
             บริการของเรา
         </h1>
         <div class="container mx-auto grid md:grid-cols-3 grid-cols-1 gap-8 my-20 sm:px-0 px-10">
-            <div class="text-center">
-                <div class="flex justify-center" v-motion-slide-visible-once-bottom>
+            <div class="text-center" v-motion-slide-visible-once-bottom>
+                <div class="flex justify-center">
                     <CarFront size="100" />
                 </div>
-                <h1 class="text-3xl font-bold pt-8 pb-4" v-motion-slide-visible-once-bottom>
+                <h1 class="text-3xl font-bold pt-8 pb-4">
                     บริการเปลี่ยนแบตเตอรี่นอกสถานที่
                 </h1>
-                <p class=" text-xl font-light " id="src/assets/images/18417_0.jpg" v-motion-slide-visible-once-bottom>
+                <p class=" text-xl font-light " id="src/assets/images/18417_0.jpg">
                     พร้อมให้บริการ
                     เปลี่ยนแบตเตอรี่ นอกสถานที่ภายใน
                     20
                     กิโลเมตร
                     เราจะถึงคุณอย่างรวดเร็ว</p>
             </div>
-            <div class="text-center">
-                <div class="flex justify-center" v-motion-slide-visible-once-bottom>
+            <div class="flex justify-center items-center flex-col" v-motion-slide-visible-once-bottom>
+                <div class="flex justify-center">
                     <Cable size="100" />
                 </div>
-                <h1 class="text-3xl font-bold pt-8 pb-4" v-motion-slide-visible-once-bottom>พ่วง
+                <h1 class="text-3xl font-bold pt-8 pb-4 text-center">พ่วง
                     จั๊มแบตเตอรี่ฉุกเฉิน
                 </h1>
                 <ul>
@@ -197,22 +197,22 @@ const onAddLine = () => {
                     <li>- ไฟไม่พอ</li>
                     <li>- เปิด ON ทิ้งไว้</li>
                 </ul>
-                <p class="text-xl font-light" id="src/assets/images/18414_0.jpg" v-motion-slide-visible-once-bottom>
-                    แบตหมด กระแสไฟไม่เพียงพอ เกิดความผิดพลาด ไม่สามารถที่จะสตาร์ทได้
+                <p class="text-xl font-light text-center" id="src/assets/images/18414_0.jpg">
+                    แบตหมด กระแสไฟไม่เพียงพอ เกิดความผิดพลาด ไม่สามารถสตาร์ทติดได้
                     <!-- แบตเตอรี่หมดกระทันหัน? ให้เราช่วย
                     พ่วงแบตเตอรี่
                     และพาคุณกลับสู่เส้นทางอย่างปลอดภัย -->
                 </p>
 
             </div>
-            <div class="text-center">
-                <div class="flex justify-center" v-motion-slide-visible-once-bottom>
+            <div class="text-center" v-motion-slide-visible-once-bottom>
+                <div class="flex justify-center">
                     <Wrench size="100" />
                 </div>
-                <h1 class="text-3xl font-bold pt-8 pb-4" v-motion-slide-visible-once-bottom>
+                <h1 class="text-3xl font-bold pt-8 pb-4">
                     ตรวจเช็คเบื้องต้น
                 </h1>
-                <p class=" text-xl font-light" id="src/assets/images/18418_0.jpg" v-motion-slide-visible-once-bottom>
+                <p class=" text-xl font-light" id="src/assets/images/18418_0.jpg">
                     หากพบปัญหาสตาร์ทไม่ติด
                 </p>
 
