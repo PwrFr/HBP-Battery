@@ -1,17 +1,17 @@
 <script setup>
 
-import { CarFront, PlugZap, ArrowRight, Cable, PhoneOutgoing, SquareArrowOutUpRight } from 'lucide-vue-next';
+import { CarFront, Wrench, ArrowRight, Cable, PhoneOutgoing, SquareArrowOutUpRight, ChevronRight, ChevronLeft } from 'lucide-vue-next';
 
 import { ref, onMounted, watch, toRefs, computed } from 'vue';
 
 import img1 from './assets/images/18414_0.jpg';
-import img2 from './assets/images/18423.jpg';
+import img2 from './assets/images/523608.jpg';
 import img3 from './assets/images/18415_0.jpg';
 import img4 from './assets/images/18417_0.jpg';
 import img5 from './assets/images/18418_0.jpg';
 import img6 from './assets/images/18422_0.jpg';
 import img7 from './assets/images/18421_0.jpg';
-import img8 from './assets/images/18427_0.jpg';
+import img8 from './assets/images/523609.jpg';
 
 const imageList = [
     img1, img2, img3, img4, img5, img6, img7, img8
@@ -40,14 +40,18 @@ const handleClick = () => {
         window.location.href = 'https://example.com'; // Replace with a fallback URL
     }
 };
+
+const onAddLine = () => {
+    window.open('https://line.me/ti/p/s54o0vJ-XC', '_blank')
+    // window.location.href = 'https://line.me/ti/p/s54o0vJ-XC'
+}
 </script>
 
 <template>
-    <!-- bg-phone -->
     <div
         class="h-screen w-screen bg-slate-700 bg-fixed bg-center bg-cover bg-no-repeat bg-image relative sm:block hidden">
 
-        <div class="backdrop-blur-[5px] w-full h-full relative ">
+        <div class="backdrop-blur-[5px] backdrop-brightness-50 w-full h-full relative ">
 
             <div
                 class="flex bg-gradient-to-b from-black px-8 pt-4 pb-10 text-white  sm:justify-between justify-center items-center">
@@ -60,16 +64,24 @@ const handleClick = () => {
 
 
             <div
-                class="absolute sm:top-1/3 top-[30%] sm:left-[10%] left-0 text-white space-y-4 w-screen sm:text-left text-center ">
-                <h1 class="sm:text-[48px] text-4xl font-bold sm:leading-[4rem] leading-[3rem]"
-                    v-motion-slide-visible-once-left>
+                class="absolute sm:top-1/3 top-[30%] sm:left-[10%] left-0 space-y-4 w-screen sm:text-left text-center ">
+                <h1 class=" text-3xl text-yellow-500 font-bold leading-[0rem]">
                     HBP
-                    Battery <br>
-                    <span class="sm:text-[48px] text-2xl">
-                        ผู้เชี่ยวชาญด้านแบตเตอรี่ <br> เปลี่ยน พ่วงแบตเตอรี่ฉุกเฉิน <br>
-                        สำหรับรถยนต์เฉพาะรุ่น
-                    </span>
+                    Battery <br />
                 </h1>
+                <h1 class="font-bold leading-[5rem] " style="font-size: 4rem;" v-motion-slide-visible-once-left>
+
+                    แบตเตอรี่ร่มเกล้า <br>
+                    คือหนึ่งทางเลือกสำหรับการให้บริการที่ดี<br>
+                </h1>
+                <span class=" text-xl text-white leading-[2rem]">
+
+                    <ul class="list-disc list-inside">
+                        <li>เปลี่ยนแบตเตอรี่นอกสถานที่</li>
+                        <li>พ่วง จั๊มแบตเตอรี่</li>
+                        <li>ตรวจเช็คเบื้องต้น</li>
+                    </ul>
+                </span>
 
 
                 <div class="flex space-x-4 sm:justify-start justify-center">
@@ -82,38 +94,53 @@ const handleClick = () => {
                         <PhoneOutgoing size="18" class="mr-2" /> 0964962516
                     </button>
                 </div>
+                <div class="relative" v-motion-slide-visible-once-bottom>
+                    <img @click="onAddLine" src="./assets/images/18633.jpg"
+                        class="w-44 cursor-pointer hover:scale-105 duration-300" alt="">
+                    <span class="flex items-center bg-black/80 absolute top-1/3 left-48 p-2 rounded animate-pulse	">
+                        <ChevronLeft size="20" class="mr-1" />
+                        กดตรงนี้ เพื่อ Add Line!
+                    </span>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="h-[100dvh] w-[100dvw] bg-slate-700 bg-no-repeat bg-center bg-phone sm:hidden block relative">
+    <div class="h-screen w-screen bg-slate-700 bg-no-repeat bg-cover bg-phone sm:hidden block relative">
 
-        <div class="backdrop-blur-[2px] w-full h-full relative ">
+        <div class="backdrop-blur-[1px] backdrop-brightness-50 w-full h-full relative ">
 
-            <div
+            <!-- <div
                 class="flex bg-gradient-to-b from-black px-8 pt-4 pb-10 text-white  sm:justify-between justify-center items-center">
                 <button class="sm:block hidden text-slate-200 hover:text-white duration-200 z-40"
                     v-motion-slide-left>หน้าหลัก</button>
                 <div class="font-medium text-lg z-40" v-motion-slide-top>HBP Battery</div>
                 <button class="sm:block hidden bg-white/25 hover:bg-white/35 duration-200 px-12 py-1.5 rounded-lg"
                     v-motion-slide-right>ติดต่อเรา</button>
-            </div>
+            </div> -->
 
 
             <div
-                class="absolute sm:top-1/3 top-[30%] sm:left-[10%] left-0 text-white space-y-4 w-screen sm:text-left text-center ">
-                <h1 class="sm:text-[48px] text-4xl font-bold sm:leading-[4rem] leading-[3rem]"
-                    v-motion-slide-visible-once-left>
+                class="absolute sm:top-1/3 top-[20%] sm:left-[10%] left-0 text-white space-y-4 w-screen sm:text-left text-center ">
+                <h1 class=" text-xl text-yellow-500 font-semibold leading-[0rem]" v-motion-slide-visible-once-top>
                     HBP
-                    Battery <br>
-                    <span class="sm:text-[48px] text-2xl">
-                        ผู้เชี่ยวชาญด้านแบตเตอรี่ <br> เปลี่ยน พ่วงแบตเตอรี่ฉุกเฉิน <br>
-                        สำหรับรถยนต์เฉพาะรุ่น
-                    </span>
+                    Battery <br />
                 </h1>
+                <h1 class="font-bold leading-[3rem] text-4xl" v-motion-slide-visible-once-left>
+
+                    แบตเตอรี่ร่มเกล้า <br>
+                    คือหนึ่งทางเลือกสำหรับการให้บริการที่ดี<br>
+                </h1>
+                <!-- <span > -->
+                <ul class="list-disc text-lg text-white leading-[2rem]" v-motion-slide-visible-once-bottom>
+                    <li>เปลี่ยนแบตเตอรี่นอกสถานที่</li>
+                    <li>พ่วง จั๊มแบตเตอรี่</li>
+                    <li>ตรวจเช็คเบื้องต้น</li>
+                </ul>
+                <!-- </span> -->
 
 
-                <div class="flex space-x-4 sm:justify-start justify-center">
+                <div class="flex space-x-4 sm:justify-start justify-center" style="margin-top: 3rem;">
                     <button @click="scrollToView" v-motion-slide-visible-once-bottom
                         class="bg-white hover:bg-slate-100 duration-200 text-black py-2 px-6 rounded-md shadow-lg">
                         บริการของเรา
@@ -122,6 +149,18 @@ const handleClick = () => {
                         class="bg-yellow-500 hover:bg-yellow-600 duration-200 text-white py-2 px-6 rounded-md shadow-lg flex items-center">
                         <PhoneOutgoing size="18" class="mr-2" /> 0964962516
                     </button>
+
+                </div>
+                <div class="flex space-x-4 justify-center items-center relative mx-8">
+                    <button v-motion-slide-visible-once-bottom @click="onAddLine"
+                        class="bg-green-500 hover:bg-green-600 duration-200 text-white py-2 px-6 rounded-md shadow-lg flex items-center">
+                        LINE Add Line
+                    </button>
+                    <!-- <div class="flex items-center gap-3 text-right bg-black/80 text-xs top-1/3 left-10 p-2 rounded">
+                        กดตรงนี้ เพื่อ Add Line!
+                        <ChevronRight size="20" />
+                    </div>
+                    <img @click="onAddLine" src="./assets/images/18633.jpg" class="w-44" alt=""> -->
                 </div>
             </div>
         </div>
@@ -140,9 +179,8 @@ const handleClick = () => {
                     บริการเปลี่ยนแบตเตอรี่นอกสถานที่
                 </h1>
                 <p class=" text-xl font-light " id="src/assets/images/18417_0.jpg" v-motion-slide-visible-once-bottom>
-                    หมดกังวลเรื่องแบตเตอรี่หมด!
-                    เราพร้อมให้บริการ
-                    เปลี่ยนแบตเตอรี่นอกสถานที่ ภายใน
+                    พร้อมให้บริการ
+                    เปลี่ยนแบตเตอรี่ นอกสถานที่ภายใน
                     20
                     กิโลเมตร
                     เราจะถึงคุณอย่างรวดเร็ว</p>
@@ -151,25 +189,31 @@ const handleClick = () => {
                 <div class="flex justify-center" v-motion-slide-visible-once-bottom>
                     <Cable size="100" />
                 </div>
-                <h1 class="text-3xl font-bold pt-8 pb-4" v-motion-slide-visible-once-bottom>พ่วงแบตเตอรี่ฉุกเฉิน</h1>
+                <h1 class="text-3xl font-bold pt-8 pb-4" v-motion-slide-visible-once-bottom>พ่วง
+                    จั๊มแบตเตอรี่ฉุกเฉิน
+                </h1>
+                <ul>
+                    <li>- ลืมปิดไฟ</li>
+                    <li>- ไฟไม่พอ</li>
+                    <li>- เปิด ON ทิ้งไว้</li>
+                </ul>
                 <p class="text-xl font-light" id="src/assets/images/18414_0.jpg" v-motion-slide-visible-once-bottom>
-                    แบตเตอรี่หมดกระทันหัน? ให้เราช่วย
+                    แบตหมด กระแสไฟไม่เพียงพอ เกิดความผิดพลาด ไม่สามารถที่จะสตาร์ทได้
+                    <!-- แบตเตอรี่หมดกระทันหัน? ให้เราช่วย
                     พ่วงแบตเตอรี่
-                    และพาคุณกลับสู่เส้นทางอย่างปลอดภัย</p>
+                    และพาคุณกลับสู่เส้นทางอย่างปลอดภัย -->
+                </p>
 
             </div>
             <div class="text-center">
                 <div class="flex justify-center" v-motion-slide-visible-once-bottom>
-                    <PlugZap size="100" />
+                    <Wrench size="100" />
                 </div>
                 <h1 class="text-3xl font-bold pt-8 pb-4" v-motion-slide-visible-once-bottom>
-                    บริการจั๊มแบตเตอรี่นอกสถานที่
+                    ตรวจเช็คเบื้องต้น
                 </h1>
                 <p class=" text-xl font-light" id="src/assets/images/18418_0.jpg" v-motion-slide-visible-once-bottom>
-                    เมื่อคุณกำลังจะออกไปทำงาน
-                    รถของคุณสตาร์ทไม่ติดในตอนเช้าตรู่
-                    เรียกใช้บริการ
-                    จั๊มแบตเตอรี่ เราจะเร่งด่วนไปช่วยคุณในทันที
+                    หากพบปัญหาสตาร์ทไม่ติด
                 </p>
 
 
@@ -185,7 +229,7 @@ const handleClick = () => {
         </div>
     </div>
 
-    <div class="grid md:grid-cols-4 grid-cols-2">
+    <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1">
 
         <!-- <div v-for="img in imageList" class="bg-fixed w-full md:h-[25dvw] h-[50dvw]"
             :style="`background:url(${img}) center center / cover no-repeat; `" /> -->
@@ -207,11 +251,11 @@ const handleClick = () => {
             </div>
             <div v-motion-slide-visible-once-bottom
                 class="leading-9 text-xl justify-end text-center flex items-center md:text-left md:pr-16 md:pl-0 lg:pr-40 lg:pl-0 px-10">
-                ที่ HBP Battery
+                HBP Battery
                 เราเลือกใช้แบตเตอรี่คุณภาพสูงจากแบรนด์ชั้นนำ
-                แบรนด์เหล่านี้เป็นที่ยอมรับในตลาดด้วยประสิทธิภาพที่ยอดเยี่ยม ความทนทาน และมาตรฐานการผลิตระดับสากล
-                คุณจึงมั่นใจได้ว่ารถของคุณจะได้รับการดูแลด้วยแบตเตอรี่ที่ดี
-                ที่สุด พร้อมรับประกันการใช้งานที่ยาวนานและความปลอดภัยสูงสุด</div>
+                แบรนด์เหล่านี้เป็นที่ยอมรับในตลาดด้วยประสิทธิภาพที่ยอดเยี่ยม มีความทนทาน และมาตรฐานการผลิตระดับสากล
+                คุณจึงมั่นใจได้ว่ารถของคุณจะได้รับแบตเตอรี่ที่ดี
+                พร้อมการรับประกันการใช้งาน</div>
         </div>
     </div>
 
@@ -277,7 +321,8 @@ const handleClick = () => {
 
                 <!-- </span> -->
                 <div class="relative flex sm:justify-start justify-center" v-motion-slide-visible-once-bottom>
-                    <img src="./assets/images/18633.jpg" class="sm:w-1/2 w-full h-full" alt="">
+                    <img @click="onAddLine" src="./assets/images/18633.jpg"
+                        class="w-44 cursor-pointer hover:scale-105 duration-300" alt="">
 
 
                 </div>
@@ -365,7 +410,7 @@ const handleClick = () => {
 }
 
 .bg-phone {
-    background-image: url('./assets/images/18413_0.jpg');
+    background-image: url('./assets/images/523351.jpg');
 
 }
 </style>
