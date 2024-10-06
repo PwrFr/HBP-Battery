@@ -48,6 +48,15 @@ const onAddLine = () => {
 </script>
 
 <template>
+
+    <div
+        class="fixed bottom-10 right-0 bg-yellow-500 z-50  px-4 py-1.5 rounded-l-3xl flex items-center gap-1 text-black shadow-lg font-semibold">
+        <small class="text-[8px] leading-[7px]">หัวใจ <br>
+            การ <br>
+            บริการ
+        </small>
+        <div>ใส่ใจ</div>
+    </div>
     <div
         class="h-screen w-screen bg-slate-700 bg-fixed bg-center bg-cover bg-no-repeat bg-image relative sm:block hidden">
 
@@ -63,15 +72,17 @@ const onAddLine = () => {
             </div>
 
 
-            <div
-                class="absolute sm:top-1/3 top-[30%] sm:left-[10%] left-0 space-y-4 w-screen sm:text-left text-center ">
-                <h1 class=" text-3xl text-yellow-500 font-bold leading-[0rem]">
-                    HBP
-                    Battery <br />
-                </h1>
-                <h1 class="font-bold leading-[5rem] " style="font-size: 4rem;" v-motion-slide-visible-once-left>
+            <div class="flex flex-col mt-16 h-full px-36 space-y-4 w-screen sm:text-left text-center ">
 
-                    แบตเตอรี่ร่มเกล้า <br>
+                <img src="/hbp_logo.png" class="w-44" v-motion-slide-visible-once-top>
+                <h1 class=" text-2xl font-bold " v-motion-slide-visible-once-top>
+                    HBP
+                    Battery ร่มเกล้า <br>
+                </h1>
+                <h1 class="font-bold leading-[6rem] text-yellow-500" style="font-size: 4rem;"
+                    v-motion-slide-visible-once-left>
+
+
                     คือหนึ่งทางเลือกสำหรับการให้บริการที่ดี<br>
                 </h1>
                 <span class=" text-xl text-white leading-[2rem]">
@@ -121,18 +132,20 @@ const onAddLine = () => {
 
 
             <div
-                class="absolute sm:top-1/3 top-[20%] sm:left-[10%] left-0 text-white space-y-4 w-screen sm:text-left text-center ">
-                <h1 class=" text-xl text-yellow-500 font-semibold leading-[0rem]" v-motion-slide-visible-once-top>
-                    HBP
-                    Battery <br />
-                </h1>
-                <h1 class="font-bold leading-[3rem] text-4xl" v-motion-slide-visible-once-left>
+                class="flex flex-col pt-16 items-center h-full px-2 left-0 text-white space-y-4 w-screen sm:text-left text-center ">
+                <img src="/hbp_logo.png" class="w-36" v-motion-slide-visible-once-top>
 
-                    แบตเตอรี่ร่มเกล้า <br>
+                <h1 class=" text-xl font-bold leading-[0rem]" v-motion-slide-visible-once-top>
+                    HBP
+                    Battery ร่มเกล้า <br>
+                </h1>
+                <h1 class="font-bold leading-[3rem] text-4xl text-yellow-500" v-motion-slide-visible-once-left>
+
+
                     คือหนึ่งทางเลือกสำหรับการให้บริการที่ดี<br>
                 </h1>
                 <!-- <span > -->
-                <ul class="list-disc text-lg text-white leading-[2rem]" v-motion-slide-visible-once-bottom>
+                <ul class="md:list-disc text-lg text-white leading-[2rem]" v-motion-slide-visible-once-bottom>
                     <li>เปลี่ยนแบตเตอรี่นอกสถานที่</li>
                     <li>พ่วง จั๊มแบตเตอรี่</li>
                     <li>ตรวจเช็คเบื้องต้น</li>
@@ -180,7 +193,7 @@ const onAddLine = () => {
                 </h1>
                 <p class=" text-xl font-light " id="src/assets/images/18417_0.jpg">
                     พร้อมให้บริการ
-                    เปลี่ยนแบตเตอรี่ นอกสถานที่ภายใน
+                    เปลี่ยนแบตเตอรี่ นอกสถานที่ ในระยะ
                     20
                     กิโลเมตร
                     เราจะถึงคุณอย่างรวดเร็ว</p>
@@ -229,7 +242,7 @@ const onAddLine = () => {
         </div>
     </div>
 
-    <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1">
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
 
         <!-- <div v-for="img in imageList" class="bg-fixed w-full md:h-[25dvw] h-[50dvw]"
             :style="`background:url(${img}) center center / cover no-repeat; `" /> -->
