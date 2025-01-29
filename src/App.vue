@@ -11,10 +11,12 @@ import img4 from './assets/images/18417_0.jpg';
 import img5 from './assets/images/18418_0.jpg';
 import img6 from './assets/images/18422_0.jpg';
 import img7 from './assets/images/18421_0.jpg';
-import img8 from './assets/images/523609.jpg';
+import img8 from './assets/images/41750.jpg';
+import img9 from './assets/images/41767.jpg';
+import img10 from './assets/images/664702.jpg';
 
 const imageList = [
-    img1, img2, img3, img4, img5, img6, img7, img8
+    img1, img2, img3, img4, img5, img6, img7, img8, img9, img10
 ]
 
 const ourService = ref()
@@ -72,7 +74,7 @@ const onAddLine = () => {
             </div>
 
 
-            <div class="flex flex-col mt-16 h-full px-36 space-y-4 w-screen sm:text-left text-center ">
+            <div class="flex flex-col mt-8 h-full px-36 space-y-4 w-screen sm:text-left text-center ">
 
                 <img src="/hbp_logo.png" class="w-44" v-motion-slide-visible-once-top>
                 <h1 class=" text-2xl font-bold " v-motion-slide-visible-once-top>
@@ -242,7 +244,7 @@ const onAddLine = () => {
         </div>
     </div>
 
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
+    <div class="grid lg:grid-cols-5 grid-cols-2">
 
         <!-- <div v-for="img in imageList" class="bg-fixed w-full md:h-[25dvw] h-[50dvw]"
             :style="`background:url(${img}) center center / cover no-repeat; `" /> -->
@@ -297,7 +299,7 @@ const onAddLine = () => {
                 </a>
             </div>
             <div class="relative flex md:justify-start justify-center " v-motion-slide-visible-once-bottom>
-                <img src="./assets/images/18474.jpg" class="lg:w-1/2 w-[75%]" alt="">
+                <img src="./assets/images/1738043394343.jpg" class="lg:w-1/2 w-[75%]" alt="">
 
 
             </div>
